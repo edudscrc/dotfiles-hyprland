@@ -1,0 +1,257 @@
+/*
+* * * * * * * * * * * * * * * * * * * * * * * * *
+* Author: Eduardo de Sá Coêlho Ribeiro Costa   	*
+* Github: eduds08							   	*
+*											   	*
+* Waybar v0.11.0						   	    *
+* * * * * * * * * * * * * * * * * * * * * * * * *
+*/
+
+/*-----GLOBAL-----*/
+
+/* Catppuccin Mocha */
+
+@define-color Rosewater #f5e0dc;
+@define-color Flamingo #f2cdcd;
+@define-color Pink #f5c2e7;
+@define-color Mauve #cba6f7;
+@define-color Red #f38ba8;
+@define-color Maroon #eba0ac;
+@define-color Peach #fab387;
+@define-color Yellow #f9e2af;
+@define-color Green #a6e3a1;
+@define-color Teal #94e2d5;
+@define-color Sky #89dceb;
+@define-color Sapphire #74c7ec;
+@define-color Blue #89b4fa;
+@define-color Lavender #b4befe;
+@define-color Text #cdd6f4;
+@define-color Subtext1 #bac2de;
+@define-color Subtext0 #a6adc8;
+@define-color Overlay2 #9399b2;
+@define-color Overlay1 #7f849c;
+@define-color Overlay0 #6c7086;
+@define-color Surface2 #585b70;
+@define-color Surface1 #45475a;
+@define-color Surface0 #313244;
+@define-color Base #1e1e2e;
+@define-color Mantle #181825;
+@define-color Crust #11111b;
+
+* {
+    font-family: "Jetbrains Mono";
+    font-weight: 900;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
+    background-color: @Crust;
+	/* border-radius: 15px; */
+	/* border-bottom: 2px solid @Base; */
+	/* padding: 6px; */
+}
+
+/*-----WORKSPACES-----*/
+
+#workspaces {
+	margin-left: 6px;
+}
+
+#workspaces button {
+	color: @Overlay0;
+
+	padding: 2px 6px;
+
+	transition: color 0.3s;
+}
+
+#workspaces button.active {
+	color: @Lavender;
+}
+
+#workspaces button:hover {
+	color: @Lavender;
+
+	transition: color 0.3s;
+
+	background: none;
+	box-shadow: none;
+	text-shadow: none;
+	transition: none;
+	border-color: transparent;
+}
+
+/*-----CUSTOM SPOTIFY-----*/
+
+#custom-spotify {
+	color: @Green;
+
+	padding: 2px 6px;
+	margin: 6px 0;
+
+	transition: color 0.2s;
+}
+
+#custom-spotify:hover {
+	color: @Sapphire;
+}
+
+/*-----TRAY-----*/
+
+#tray {
+	padding: 2px 6px;
+}
+
+#tray menu {
+	background-color: @Crust;
+}
+
+#tray menu menuitem {
+	color: @Text;
+}
+
+#tray menu menuitem:hover {
+	color: @Mauve;
+	background-color: @Surface0;
+}
+
+/*-----CLOCK-----*/
+
+#clock {
+	color: @Text;
+
+	padding: 2px 6px;
+
+	transition: color 0.3s;
+}
+
+#clock:hover {
+	color: @Mauve;
+}
+
+/*-----GROUP BTOP-----*/
+
+#group-btop {
+	padding: 0 6px;
+}
+
+#cpu, #memory, #disk, #temperature, #custom-pipe {
+	padding: 2px 6px;
+	transition: color 0.3s;
+}
+
+#cpu {
+	color: @Red;
+}
+
+#memory {
+	color: @Teal;
+}
+
+#disk {
+	color: @Blue;
+}
+
+#temperature {
+	color: @Peach;
+}
+
+#cpu:hover {
+	color: @Text;
+}
+#memory:hover {
+	color: @Text;
+}
+#disk:hover {
+	color: @Text;
+}
+#temperature:hover {
+	color: @Text;
+}
+
+#custom-pipe {
+	color: @Overlay0;
+}
+
+/*-----MIC && NETWORK-----*/
+
+#group-network-mic {
+	padding: 2px 6px;
+}
+
+#network {
+	color: @Lavender;
+
+	padding: 2px 6px;
+	transition: color 0.3s;
+}
+
+#network:hover {
+	color: @Mauve;
+}
+
+#pulseaudio.mic {
+	color: @Lavender;
+
+	padding: 2px 6px;
+	transition: color 0.3s;
+}
+
+#pulseaudio.mic:hover {
+	color: @Mauve;
+}
+
+#bluetooth {
+	color: @Lavender;
+
+	padding: 2px 6px;
+	transition: color 0.3s;
+}
+
+#bluetooth:hover {
+	color: @Mauve;
+}
+
+/*-----PULSEAUDIO VOLUME-----*/
+
+#pulseaudio.sound {
+	color: @Mauve;
+
+	margin: 6px 0;
+
+	padding: 2px 6px;
+
+	transition: color 0.2s;
+}
+
+#pulseaudio.sound:hover {
+	color: @Pink;
+}
+
+/*-----CUSTOM POWER-----*/
+
+#custom-power {
+	color: @Yellow;
+
+	padding: 2px 6px;
+
+	margin-right: 6px;
+
+	transition: color 0.3s;
+}
+
+#custom-power:hover {
+	color: @Maroon;
+}
+
+/*-----TOOLTIP-----*/
+
+tooltip {
+	background-color: @Crust;
+}
+
+tooltip label {
+	color: @Text;
+}
